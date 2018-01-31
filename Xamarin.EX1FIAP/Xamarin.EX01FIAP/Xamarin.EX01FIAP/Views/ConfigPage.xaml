@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xamarin.EX01FIAP.Views.ConfigPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+
+
+            <TableView Grid.Row="0">
+                <TableView.Root>
+                    <TableSection Title="Privacidade">
+                        <SwitchCell x:Name="swRecebeEmail" Text="Enviar por e-mail" OnChanged="SwitchCell_OnChanged"/>
+                    </TableSection>
+                </TableView.Root>
+            </TableView>
+
+            <StackLayout Grid.Row="1">
+                <Entry x:Name="txtEmail" Placeholder="Entre com e-mail" IsVisible="False" Text="{Binding ConfigModel.Email}"/>
+
+                <Button x:Name="btnSalvar" Text="Salvar" IsVisible="False"
+                        Command="{Binding OnAdicionarEmailCMD}"
+                        CommandParameter="{Binding ConfigModel}" 
+                        />
+            </StackLayout>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

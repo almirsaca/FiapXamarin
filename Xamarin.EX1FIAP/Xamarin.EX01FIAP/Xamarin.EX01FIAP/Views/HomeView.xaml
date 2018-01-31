@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xamarin.EX01FIAP.Views.HomeView">
+    <ContentPage.Content>
+        <StackLayout Padding="30" Spacing="10">
+            <StackLayout HorizontalOptions="Center">
+                <Button Text="Enviar" x:Name="btnHome"
+                        Command="{Binding OnVerificarEmailCMD}"
+                        CommandParameter="{Binding ConfigModel}" />
+                <Button Text="Configuração" x:Name="btnConfig"
+                        Command="{Binding OnNovoCMD}"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

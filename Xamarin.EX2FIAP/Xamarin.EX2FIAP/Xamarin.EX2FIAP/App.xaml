@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xamarin.EX2FIAP.App">
+    <Application.Resources>
+
+        <!-- Application resource dictionary -->
+        <ResourceDictionary>
+            <Style x:Key="BotaoBase" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="Small" />
+            </Style>
+            <Style x:Key="BotaoSalvar" BasedOn="{StaticResource BotaoBase}" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Green" />
+            </Style>
+            <Style x:Key="BotaoCancelar" BasedOn="{StaticResource BotaoBase}" TargetType="Button">
+                <Setter Property="Text" Value="Cancelar" />
+                <Setter Property="BackgroundColor" Value="Red" />
+            </Style>
+
+            <DataTemplate x:Key="FuchsiaTemplate">
+                <ViewCell>
+                    <StackLayout Padding="5,0,5,0">
+                        <Label Text="{Binding Nome}" Font="14" />
+                        <Label Text="{Binding Email}" Font="10" />
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+
+        </ResourceDictionary>
+
+    </Application.Resources>
+</Application>
